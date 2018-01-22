@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuView" customModule="FootBallCup" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="menu" id="U6b-Vx-4bR" customClass="MenuView" customModule="FootBallCup">
+            <rect key="frame" x="0.0" y="0.0" width="504" height="151"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="89g-5h-1sK">
+                    <rect key="frame" x="10" y="0.0" width="484" height="151"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pV4-18-hhZ">
+                            <rect key="frame" x="0.0" y="0.0" width="121" height="151"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="Barcelona">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="tappedButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="hXc-oz-E2h"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EiY-sE-6oC">
+                            <rect key="frame" x="121" y="0.0" width="121" height="151"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="RealMadrid">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="tappedButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="iFW-K8-lWj"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XdW-DH-0rB">
+                            <rect key="frame" x="242" y="0.0" width="121" height="151"/>
+                            <state key="normal" title="PSG"/>
+                            <connections>
+                                <action selector="tappedButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="lgx-uI-JJC"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mjt-jB-rOQ">
+                            <rect key="frame" x="363" y="0.0" width="121" height="151"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="City">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="tappedButton:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="smh-RT-O9q"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="0.6428104043006897" green="0.091416992247104645" blue="0.16139289736747742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="bottom" secondItem="89g-5h-1sK" secondAttribute="bottom" id="Km6-Mv-LdS"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="89g-5h-1sK" secondAttribute="trailing" constant="10" id="Nxl-Pb-ArV"/>
+                <constraint firstItem="89g-5h-1sK" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="10" id="VD1-8m-gZx"/>
+                <constraint firstItem="89g-5h-1sK" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" id="X6U-tE-Iaa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <point key="canvasLocation" x="76" y="80.5"/>
+        </collectionReusableView>
+    </objects>
+</document>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IbH-CJ-Ilh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Foot Ball Cup Collection View Controller-->
+        <scene sceneID="eEA-do-BYj">
+            <objects>
+                <collectionViewController id="IbH-CJ-Ilh" customClass="FootBallCupCollectionViewController" customModule="FootBallCup" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="g01-oU-oJB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="40" minimumInteritemSpacing="40" id="yl9-mA-P4r" customClass="CustomLayout" customModule="FootBallCup" customModuleProvider="target" propertyAccessControl="none">
+                            <size key="itemSize" width="300" height="250"/>
+                            <size key="headerReferenceSize" width="0.0" height="50"/>
+                            <size key="footerReferenceSize" width="0.0" height="50"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ddt-eN-nnx" customClass="PlayerCell" customModule="FootBallCup" customModuleProvider="target">
+                                <rect key="frame" x="37.5" y="50" width="300" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="250"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XVx-JV-r9j">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="250"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="XVx-JV-r9j" firstAttribute="top" secondItem="ddt-eN-nnx" secondAttribute="top" id="2ym-CA-AGz"/>
+                                    <constraint firstAttribute="bottom" secondItem="XVx-JV-r9j" secondAttribute="bottom" id="DEC-6s-voA"/>
+                                    <constraint firstAttribute="trailing" secondItem="XVx-JV-r9j" secondAttribute="trailing" id="VBH-kp-lAG"/>
+                                    <constraint firstItem="XVx-JV-r9j" firstAttribute="leading" secondItem="ddt-eN-nnx" secondAttribute="leading" id="aWk-TN-65l"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="picture" destination="XVx-JV-r9j" id="1wr-1F-6lh"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="forceLeftToRight" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="sectionHeader" id="I9i-kA-KFA" userLabel="Collection View Section Header View" customClass="SectionHeaderView" customModule="FootBallCup" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpJ-nV-H5g">
+                                    <rect key="frame" x="166.5" y="14.5" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.6428104043006897" green="0.091416992247104645" blue="0.16139289736747742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="hpJ-nV-H5g" firstAttribute="centerY" secondItem="I9i-kA-KFA" secondAttribute="centerY" id="8bS-as-SRj"/>
+                                <constraint firstItem="hpJ-nV-H5g" firstAttribute="centerX" secondItem="I9i-kA-KFA" secondAttribute="centerX" id="oxT-Ub-1RO"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="title" destination="hpJ-nV-H5g" id="vHX-r1-NcL"/>
+                            </connections>
+                        </collectionReusableView>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="sectionFooter" id="SVL-Hg-0vn" userLabel="Collection View Section Footer View" customClass="SectionFooterView" customModule="FootBallCup" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="300" width="375" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FMr-UP-yiW">
+                                    <rect key="frame" x="166.5" y="14.5" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.010738043114542961" green="0.0039626527577638626" blue="0.99578911066055298" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="FMr-UP-yiW" firstAttribute="centerY" secondItem="SVL-Hg-0vn" secondAttribute="centerY" id="aXN-b8-MvB"/>
+                                <constraint firstItem="FMr-UP-yiW" firstAttribute="centerX" secondItem="SVL-Hg-0vn" secondAttribute="centerX" id="hcU-F8-dmS"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="mark" destination="FMr-UP-yiW" id="2Oy-sR-WXB"/>
+                            </connections>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="IbH-CJ-Ilh" id="Wiv-d5-gr5"/>
+                            <outlet property="delegate" destination="IbH-CJ-Ilh" id="aej-JO-rQd"/>
+                        </connections>
+                    </collectionView>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1D-Gf-VDu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-223" y="14"/>
+        </scene>
+    </scenes>
+</document>
